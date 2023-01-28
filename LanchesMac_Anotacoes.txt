@@ -1,0 +1,449 @@
+				LANCHESMAC				
+
+				AULA 44
+
+OPERADORES: 
+
+- "?." - (elvis operator) 
+
+	Se o lado esquerdo da expressão for diferente de null, retorna o lado direito desse operador, se for null, retorna o lado direito
+
+- "??" - (operador de coalescência nula)
+
+	O operador de coalescência nula, ?? , retornará o valor do operando esquerdo se não for null; caso contrário, ele avaliará o operando direito e retornará seu resultado.
+
+
+				AULA 54
+
+APRESENTANDO O CONCEITO DE TAG HELPERS:
+
+
+As Tag Helpers permitem que o código do lado do servidor participe na criação e renderização de elementos HTML em arquivos Razor.
+
+Elas são uma sintaxe alternativa aos Html Helpers e obtém o mesmo resultado final gerando o código HTML
+A sintaxe parece com HTML ( elementos e atributos ), mas é processadi pelo Razor no servidor
+
+Exemplos
+
+<input type="text" asp-for="Nome"/>
+
+Normal: <input id="nome" name="nome" type="text" value=""/>
+
+<label asp-for="Email"></label>
+
+Normal: <label for="Email">Email</label>
+
+<form asp-controller="Conta" asp-action="Login">
+	// Os elementos do formulário
+</form>
+
+Normal: <form action="/Conta/Login" method="post">
+	// Os elementos do formulário
+	</form>
+
+As Tags Helpers são diretivas que são definidas numa automaticamente*
+
+A diretiva @addTagHelper torna as Tag Helpers disponíveis para uma view
+
+Ao criar uma aplicação ASP .NET Core o arquivo Views/_ViewImports.cshtml que será herdado por todas as views da pasta /Views e subpastas.
+Será criado com o seguinte o conteúdo:
+
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+
+PARA A CRIAÇÃO DE ELEMENTOS DE FORMULÁRIO TEMOS UM CONJUNTO DE TAG HELPERS DESCRITOS A SEGUIR:
+
+-Input Tag Helper
+
+-Text Area Tag Helper
+
+-Validation Tag Helper
+
+-Label Tag Helper
+
+-Select Tag Helper
+
+O recurso do Intellisense também está disponível para as TagHelpers.
+
+A TAG HELPER INPUT
+
+A Tag Helper Input vincula um elemento HTML <input> a uma expressão de modelo na sua view razor.
+A sintaxe usada é:
+
+<Input asp-for="<Nome da expressão>">
+
+A Tag Helper Input define o atributo de tipo HTML com base nos tipos da .NET Framework.
+
+Tipo .NET			Input Type
+
+Bool				checkbox
+String				text	
+DateTime			datetime
+Byte				number
+Int				number
+Single, Double			number
+
+Atributos			Input Type
+
+[EmailAddress]			email
+[Url]				url
+[HiddenInput]			hidden
+[Phone]				tel
+[DataType(DataType.Password)]	password
+[DataType(DataType.Date)]	date
+[DataType(DataType.Time)]	time
+
+
+				AULA 55
+
+CRIANDO UMA TAG HELPER
+
+- Criar pasta TagHelpers
+
+- Criar classe EmailTagHelper(herda de TagHelper)
+
+- Sobrescerver o método Proccess(context, output)
+
+- Criar item de menu Contato no arquiv _Layout
+
+- Criar controlador ContatoController
+
+- Criar método Action Index e a view Index
+
+
+				AULA 57
+
+APRESENTANDO OS CONCEITOS SOBRE ROTEAMENTO - I
+
+ROTEAMENTO DE ENDPOINT
+
+O roteamento é o processo pelo qual o framework ASP .NET Core inspeciona os requests HTTP de entrada e faz o mapeamento destes requests para executar os métodos Action correspondente do controlador.
+
+Esse processo é chamado de roteamento de endpoint
+
+RESPONSABILIDADES DO ROTEAMENTO
+
+1 - Mapear os requests de entrada para Action do Controlador
+
+2 - Gerar a URL de saída que corresponde às ações do Controller
+
+ENDPOINT 
+
+Um Endpoint é um objeto que contém tudo que você precisa para executar um Request de entrada:
+
+1 - Os metadados do Request
+
+2 - O delegate que a ASP .NET Core usa para processar o Request
+
+Os endpoints são definidos pelo método UseEndpoints. [Usando a configuração feita no arquivo Startup]
+
+
+				AULA 72
+
+CONFIGURANDO O IDENTITY NO PROJETO
+
+Microsoft.AspNetCore.Identity
+
+É o sistema de associação que adiciona recursos de login de autenticação
+
+Microsoft.AspNetCore.Identity.EntityFrameworkCore
+
+É o provedor de identidade ASP .NET Core que usa o Entity Framework Core
+
+ABORDAGEM PADRÃO
+
+- Utilizar um banco de dados Dql Server para armazenar as informaç~eoes dos usuários como nome, senha, permissões, etc
+
+- Criar o banco de dados e as tabelas usando a abordagem Code-First
+
+- A nossa implementação vai criar as tabelas do Identity no Banco de dados da aplicação LancheDatabase
+
+ARQUIVO DE CONTEXTO
+
+- deve implementar a Interface IdentityDbContext<IdentityUser>. Desse modo:
+
+	public class AppDbContext : IdentityDbContext<IdentityUser> {... codigo ...}
+
+- O IdentityDbContext fornece todas as propriedades DbSet necessárias para gerenciar as tabelas de identidade no SQL Server
+
+- A classe IdentityUser é fornecida pela ASP.NET Core e contém propriedades para UserName, PasswordHash, Email etc. Essa é a classe usada pelo Identity para gerenciar usuários registrados do seu aplicativo
+
+- Depois de aplicar essa configuração, basta apenas aplicar o migrations e ele vai aplicar as tabelas no banco de dados
+
+ARQUIVO STARTUP
+
+- Applicar o seguinte código na function ConfigureServices
+
+ConfigureServices(IServiceCollection services)
+{
+	services.AddIdentity<IdentityUser, IdentityRole>()
+		.AddEntityFrameworkStores<AppDbContext>()
+		.AddDefaultTokenProviders();
+}
+
+- IdentityRole é uma classe interna do Identity e fornece informações dsobre perfis do usuário
+
+- AddEntityFrameworkStores - permite armazenar e recuperar informações de usuários e do perfil usando o EF Core para o SQL Server
+
+- AddDefaultTokenProviders - Inclui provedores de token padrão para redefinir senha, alterar email, no. de telefone e geração de token para autenticação em dois fatores
+
+- Após isso precisamos incluir um middleware de autenticação e autorização na function Configure()
+
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+	app.UseAuthentication();
+
+	app.UseAuthorization();
+}
+
+- O middleware de autenticação (UseAuthentication) tenta autenticar o usuário antes de ele ter acesso aos recursos seguros.
+
+- Middleware de autorização (UseAuthorization) autoriza um usuário a acessar recursos seguros
+
+				AULA 75
+
+TAG HELPERS USADAS NA VALIDAÇÃO
+
+1 - asp-validation-summary
+
+	É usada para exibir um resumo das mensagens de validação no formulário
+
+	asp-validation-summaru		Mensagem de validação exibida
+
+	All				Propriedades e model
+
+	ModelOnly			Model
+
+	None				None
+
+
+2 - asp-validation-for
+
+	Anexa as mensagens de erro de validação no campo de entrada da propriedade de modelo especificada
+
+	Quando ocorre um erro de validação do lado do cliente, o JQuery exibe a mensagem de erro no elemento <span>.
+
+				AULA 76
+
+IMPLEMENTADO O REGISTRO - I
+
+AntiForgeryToken (evita ataques CSRF)
+
+O cliente solicita uma página HTML que contém um formulário
+
+A ASP.NET Core inclui dois tokens no response
+
+	- Um token é enviado como um cookie HTTP cifrado
+
+	- O outro é colocado em um campo oculto do formulário (hidden)
+
+Os tokens são gerados aleatoriamente para que um hacker não consiga adivinhar os valores 
+
+Quando o cliente envia o formulário, ele deve enviar os dois tokens de volta ao servidor
+
+O cliente envia o token do cookie e o token do formulário dentro dos dados do formulário.
+
+Se uma solicitação não incluir os dois tokens que devem ser iguais, o servidor não permitirá a solicitação.
+
+O atributo [ValidateAntiForgeryToken] é usado para validar o token gerado na view
+
+				AULA 78
+
+IMPLEMENTANDO O LOGOUT
+
+View Injection -> permite injetar dependências em uma View usando a palavra-chave @inject.
+
+	@inject SignInManager<IdentityUser> SignManager
+
+
+				AULA 79
+
+VERIFICAR SE O USUÁRIO ESTÁ AUTENTICADO
+
+HÁ DOIS MODOS DE FAZER
+
+1 - Via Código
+
+if (User.Identity.IsAuthenticated)
+{
+      return View();
+}
+
+      return RedirectToAction("Login", "Account");
+
+2 - Usar o atributi [Authorize no Controller ou na Action
+
+- permite o acesso somente de usuários autenticados
+
+
+[Authorize]
+public class ContatoController : Controller
+{
+	public IActionResult Index()
+	{
+		return View();
+	}
+}
+
+//Verifica somente se o usuário está autenticado
+
+[Authorize(Roles="Admin")]
+public class ContatoController : Controller
+{
+	public IActionResult Index()
+	{
+		return View();
+	}
+}
+//Verifca se o usuário está autenticado e se pertence ao perfil Admin
+
+// Esses atributos podem também ser definidos nos mesmos níveis dos métodos Action
+
+3 - Usar o atributo [AllowAnonymous] no controller ou na Action
+
+- Permite o acesso a usuários não autenticados
+
+// Esses atributos podem também ser definidos nos mesmos níveis dos métodos Action
+
+[Authorize]
+public class ContatoController : Controller
+{
+	public IActionResult Index()
+	{
+		return View();
+	}
+
+	[AllowAnonymous] 
+	public IActionResult Teste()
+	{
+		return View();
+	}
+}
+
+[AllowAnonymous]
+public class ContatoController : Controller		//Permite o acesso a usuário não autenticado ao Controlador
+{
+	public IActionResult Index()
+	{
+		return View();
+	}
+
+	[Authorize]
+	public IActionResult Teste()			//Perde o seu efeito pois é anulado pelo método AllowAnonymous
+	{
+		return View();
+	}
+}
+
+Política de acesso do site
+
+1 - Usuários não autenticados (anônimos)
+
+	a - A página principal do site e toddas as suas opções		[AllowAnonymous]
+
+	b - As páginas dos produtos : lanches, etc
+
+	c - A página de Contato
+
+2 - Usuários autenticados
+
+	a - Incluir itens no carrinho de compra				[Authorize]
+
+	b - Remover um item do carrinho
+
+	C - Confirmar e finalizar o pedido
+
+3 - Usuários do perfil Admin
+
+	a - Acessar a área de administração
+
+			
+				AULA 80
+
+APRESENTANDO O CONCEITO DE AREAS: CRIANDO A ÁREA ADMIN
+
+AREAS - CONCEITOS
+
+As áreas podem ser definidas como unidades funcionais menores em um projeto
+Asp.Net Core MVC com seu próprio conjunto de controladores, views e modelos
+
+Elas são usadas para organizar funcionalidades relacionadas em um grupo separado e ajudam a gerenciar a aplicação de uma maneira melhor separando cada aspecto funcional em diferentes Áreas
+
+AREAS - QUANDO USAR
+
+Quando sua aplicação for composta de múltiplos componentes funcionais de alto nível que podem ser separados logicamente
+
+Se você deseja particionar seu projeto MVC para que cada área funcional possa ser tratada de forma independente
+
+AREAS - CARACTERÍSTICAS
+
+Uma aplicação ASP.NET Core MVC podem possuir qualquer número de áreas
+
+Cada área possui seus próprios controladores, models e views
+
+Suporta múltiplos controladores com o mesmo nome em áreas diferentes
+
+AREAS - UTILIZAÇÃO - 1
+
+A seguir temos que definir uma rota para trabalhar com a nova área criada :
+
+...
+
+app.UseEndpoints(endpoint => 
+{
+	endpoints.MapControllerRoute(
+		name: "AdminArea",
+		pattern: "{area:exists}/{controller=Admmin}/{action=Index}/{id?}");
+
+	...
+})
+
+Configuração com um nome de área genérico que funciona para qualquer área que não estiver definida explicitamente
+
+AREAS - UTILIZAÇÃO - 2
+
+Definindo uma rota para uma área específica e a seguir uma rota genérica
+
+app.UseEndpoints(endpoint => 
+{
+        endpoints.MapControllerRoute(
+                name: "categoriaFiltro",
+                pattern: "Lanche/{action}/{categoria?}",
+                defaults: new { controller = "Lanche", Action = "List"});
+
+	endpoints.MapControllerRoute(
+		name: "AdminArea",
+		pattern: "{area:exists}/{controller=Admmin}/{action=Index}/{id?}");
+
+	...
+})
+
+AREAS - UTILIZAÇÃO - 3
+
+Decorar o controlador com o atributo [Area("nome_area")] definido o nome da área
+
+[Area("Admin")]
+public class AdminCategoriasController : Controller
+{
+	...
+}
+
+[Area("Categorias")]
+public CategoriasController : Controller
+{
+	...
+}
+
+Areas - Definindo links / rotas para áreas
+
+Usar o atributo asp-area para informa que um link / rota se refere a uma área
+
+<a class="nav-link text-light" asp-area="Admin" asp-controller="Admin" asp-action="Index">Admin</a>
+
+<a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+
+COM HTML HELPER
+
+<a href="@Url.Action("index", "home", new {Area="admin"}>Ir para área Admin</a>
+
+COM ACTIONLINK
+@Html.ActionLink("Admin", "Index", "Home", new {area = "Admin"})

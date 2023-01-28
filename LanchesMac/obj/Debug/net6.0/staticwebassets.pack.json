@@ -1,0 +1,345 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\LanchesMac.bundle.scp.css",
+      "PackagePath": "staticwebassets\\LanchesMac.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\Envelope-icon24.png",
+      "PackagePath": "staticwebassets\\images\\Envelope-icon24.png"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\Home-iconred.png",
+      "PackagePath": "staticwebassets\\images\\Home-iconred.png"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\adminarea.jpg",
+      "PackagePath": "staticwebassets\\images\\adminarea.jpg"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\carousel11.jpg",
+      "PackagePath": "staticwebassets\\images\\carousel11.jpg"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\carousel12.jpg",
+      "PackagePath": "staticwebassets\\images\\carousel12.jpg"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\carousel13.jpg",
+      "PackagePath": "staticwebassets\\images\\carousel13.jpg"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\carrinho-carrinho.png",
+      "PackagePath": "staticwebassets\\images\\carrinho-carrinho.png"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\carrinho-de-compras.png",
+      "PackagePath": "staticwebassets\\images\\carrinho-de-compras.png"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\faleconosco1.jpg",
+      "PackagePath": "staticwebassets\\images\\faleconosco1.jpg"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\hamburgue.jpg",
+      "PackagePath": "staticwebassets\\images\\hamburgue.jpg"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\hamburgue.png",
+      "PackagePath": "staticwebassets\\images\\hamburgue.png"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\hamburguerthumb.jpg",
+      "PackagePath": "staticwebassets\\images\\hamburguerthumb.jpg"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\hotdog.jpg",
+      "PackagePath": "staticwebassets\\images\\hotdog.jpg"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\hotdogthumb.jpg",
+      "PackagePath": "staticwebassets\\images\\hotdogthumb.jpg"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\lixeira.png",
+      "PackagePath": "staticwebassets\\images\\lixeira.png"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\phone-app-icon.png",
+      "PackagePath": "staticwebassets\\images\\phone-app-icon.png"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\registrado.png",
+      "PackagePath": "staticwebassets\\images\\registrado.png"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\sanduiche.jpg",
+      "PackagePath": "staticwebassets\\images\\sanduiche.jpg"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\sanduichethumb.jpg",
+      "PackagePath": "staticwebassets\\images\\sanduichethumb.jpg"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\senha-de-login.png",
+      "PackagePath": "staticwebassets\\images\\senha-de-login.png"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.LanchesMac.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.LanchesMac.props",
+      "PackagePath": "build\\LanchesMac.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.LanchesMac.props",
+      "PackagePath": "buildMultiTargeting\\LanchesMac.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.LanchesMac.props",
+      "PackagePath": "buildTransitive\\LanchesMac.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

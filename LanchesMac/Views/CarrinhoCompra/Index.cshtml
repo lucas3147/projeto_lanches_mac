@@ -1,0 +1,58 @@
+﻿@model CarrinhoCompraViewModel
+
+<div class="container">
+    <div class="row">
+        <div>
+            <img style="display: inline-block;" class="p-2" src="~/images/carrinho-de-compras.png">
+            <h4 style ="display: inline-block;"> Seu carrinho de compras : </h4>
+        </div>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Quantidade</th>
+                    <th>Lanche</th>
+                    <th class="text-right">Preço</th>
+                    <th class="text-right">subtotal</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model.carrinhoCompra.CarrinhoCompraItens)
+                {
+                    <tr>
+                        <td class="text-center">@item.Quantidade</td>
+                        <td class="text-left">@item.Lanche.Nome</td>
+                        <td class="text-right">@item.Lanche.Preco.ToString("c")</td>
+                        <td class="text-right">@Convert.ToDecimal(@item.Quantidade * @item.Lanche.Preco).ToString("c")</td>
+                        <td class="text-center">
+                            <a class="text-center" asp-controller="CarrinhoCompra" asp-action="RemoverItemDoCarrinhoCompra"
+                            asp-route-lancheId="@item.Lanche.LancheId">
+                            <img src="~/images/lixeira.png">
+                            </a>
+                        </td>
+                        
+                    </tr>
+                }
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="text-right">Total:</td>
+                    <td class="text-right">
+                        @Model.CarrinhoCompraTotal.ToString("c")
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="text-right">
+            <div class="btn-group">
+                <a class="btn btn-success" asp-controller="Pedido" asp-action="Checkout">Encerrar Pedido</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-primary" asp-controller="Lanche" asp-action="List">Continuar Comprando</a>
+        </div>
+    </div>
+</div>
+
