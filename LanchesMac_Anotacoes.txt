@@ -447,3 +447,102 @@ COM HTML HELPER
 
 COM ACTIONLINK
 @Html.ActionLink("Admin", "Index", "Home", new {area = "Admin"})
+
+				AULA 80
+
+ROTEIRO PARA IMPLEMENTAR O PERFIL PARA O USUÁRIO ADMIN
+
+Implementar a ciriação de Roles e Users e atribuir o usuário ao perfil
+
+1 - Implementar um serviço para criar os perfis ou roles : Admin e Member
+
+	- ISeedUserRoleInitial
+ 	- ISeedUserRoleInitial
+
+2 - Registrar o serviço no contêiner diferente
+
+	services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
+
+3 - Chamar o serviço na iniciaalização da aplicação (Program ou Startup)
+
+	seedUserRoleInitial.SeedRoles();
+	seedUserRoleInitial.SeedUsers();
+
+4 - Alterar o códigodo método Register para atribuit os usuários ao perfil Member
+
+	await _userManager.AddToRoleAsync(user, "Member");
+
+
+				AULA 84
+
+TESTANDO A IMPLEMENTAÇÃO DO PERFIL ADMIN
+
+- Quando tentamos acessar a área de Admin como um usuário anônimo, é lançado um erro
+ Informando que a política de autorização do usuário Admin não foi encontrada
+
+O que aconteceu?
+
+Como implementamos um registro de usuário dos perfis como um serviço, nós estamos implementando uma nova política de autorização baseada nas roles
+e assim nós temos que registrar essa política usando o método AddAuthorization, definindo a política que eu usei, e informando que precisamos da role Admin
+
+
+				AULA 88
+
+ROTEIRO PARA OS AJUSTES NO PROJETO
+
+	Paginação e filtro de dados de pedidos e lanches (area Admin)
+
+	1 - Fazer a implementação via código usando somente os recursos da ASP.NET Core
+
+	2 - Fazer a implementação usando um pacote de terceiro
+
+		- Reflection.Mvc.Paging (Nuget)
+
+		- Código fonte e instruções para instalação e uso
+
+		https://github.com/sonnemaf/ReflectionIT.Mvc.Paging
+
+		Install-Package ReflectionIT.Mvc.Paging
+
+
+1 - Incluir o serviço no projeto no método ConfigureServices da classe Startup
+
+	...
+	services.AddPaging(options => 
+	{
+		options.ViewName = "Bootstrap4";
+		options.PageParameterName = "pageindex";
+	});
+	...
+
+2 - Alterar o método Action do controlador referente à view onde queremos paginar os dados
+
+	public async Task<IAcionResult> Index(string filter, int pageIndex = 1, string sort = "Nome")
+	{
+		var resultado = _context.Lanches.Include (l => l.Categoria).AsQueryable();
+
+		if(!string.IsNullOrWhiteSpace(filter))
+		{
+			resultado = resultado.Where(p => p.Nome.Contains(filter));
+		}
+
+		var model = await PagingList.CreateAsync(resultado, 5, pageindex, sort, "Nome");
+
+		model.RouteValue = new RouteValueDictionary ({"filter", "filter"});
+
+		return View(model);
+	}
+
+3 - Alterar o código da view que vai exibir os dados paginados (index.cshtml)
+
+	@model ReflectionIT.Mvc.Paging.PagingList<LanchesMac.Models.Lanche>
+	
+	....
+		Trecho do formulário 
+	....
+
+	Total de Lanches : @Model.TotalRecordCount
+	<div>
+		//Aqui eu uso  uma view component e tag helper para permitir o usuário navegar entre as páginas
+		<vc: pager paging-list="@Model"></vc:pager>
+	<div>

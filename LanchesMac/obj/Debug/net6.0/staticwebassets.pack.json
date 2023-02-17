@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets\\images\\lixeira.png"
     },
     {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\negado1.jpg",
+      "PackagePath": "staticwebassets\\images\\negado1.jpg"
+    },
+    {
       "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\phone-app-icon.png",
       "PackagePath": "staticwebassets\\images\\phone-app-icon.png"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CIx+Wnn2ZEzeA0Dgfl4ZzMJV9SJSrL1xqTRLP06X19I=",
+  "Hash": "Ir49UbXGAq/Wp+CSFGj7/QhaNNOXwJbk1nxj+Ug6lSY=",
   "Source": "LanchesMac",
   "BasePath": "_content/LanchesMac",
   "Mode": "Default",
@@ -338,6 +338,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\lixeira.png"
+    },
+    {
+      "Identity": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\negado1.jpg",
+      "SourceId": "LanchesMac",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\",
+      "BasePath": "_content/LanchesMac",
+      "RelativePath": "images/negado1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\negado1.jpg"
     },
     {
       "Identity": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\phone-app-icon.png",
