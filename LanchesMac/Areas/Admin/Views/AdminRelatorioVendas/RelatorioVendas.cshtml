@@ -1,0 +1,29 @@
+﻿@model IEnumerable<LanchesMac.Models.Pedido>
+
+    <h2>Pedidos Por Período</h2>
+
+    <nav class="navbar navbar-dark">
+        <div class="container-fluid">
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="minDate">Data Inicial</label>
+                        <input type="date" class="form-cntrol" name="minDate" value=@ViewData["minDate"] />
+                    </div>
+                    <div class="form-group">
+                        <label for="minDate">Data Final</label>
+                        <input type="date" class="form-cntrol" name="minDate" value=@ViewData["maxDate"] />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success">Filtrar</button>
+            </form>
+
+        </div>
+    </nav>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Total de Pedidos = @Model.Count()</h3>
+            <h3 class="panel-title">Total de Lanches nos Pedidos = @Model.Sum()</h3>
+            <h3 class="panel-title">Total de Pedidos = @Model.Count()</h3>
+        </div>
+    </div>

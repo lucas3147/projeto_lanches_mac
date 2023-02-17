@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\LanchesMac.csproj": {}
+    "C:\\Users\\Lucas.lima\\Downloads\\Lucas\\GIT\\LanchesMac\\LanchesMac\\LanchesMac.csproj": {}
   },
   "projects": {
-    "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\LanchesMac.csproj": {
+    "C:\\Users\\Lucas.lima\\Downloads\\Lucas\\GIT\\LanchesMac\\LanchesMac\\LanchesMac.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\LanchesMac.csproj",
+        "projectUniqueName": "C:\\Users\\Lucas.lima\\Downloads\\Lucas\\GIT\\LanchesMac\\LanchesMac\\LanchesMac.csproj",
         "projectName": "LanchesMac",
-        "projectPath": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\LanchesMac.csproj",
-        "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
-        "outputPath": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\obj\\",
+        "projectPath": "C:\\Users\\Lucas.lima\\Downloads\\Lucas\\GIT\\LanchesMac\\LanchesMac\\LanchesMac.csproj",
+        "packagesPath": "C:\\Users\\Lucas.lima\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lucas.lima\\Downloads\\Lucas\\GIT\\LanchesMac\\LanchesMac\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Gustavo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lucas.lima\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
