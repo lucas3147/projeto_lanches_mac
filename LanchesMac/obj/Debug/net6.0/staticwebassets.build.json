@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ofR+bOX+G5CZBZULPwYOtK8KjpM/w+Lu58E9D7fnDpw=",
+  "Hash": "fx3j+rn4imHrTf/sy7rKG3YrgXKHosIdUWkUuo+9CG0=",
   "Source": "LanchesMac",
   "BasePath": "_content/LanchesMac",
   "Mode": "Default",
@@ -372,6 +372,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\phone-app-icon.png"
+    },
+    {
+      "Identity": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\produtos\\lanche-do-gordao-cosmopolis.png",
+      "SourceId": "LanchesMac",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\",
+      "BasePath": "_content/LanchesMac",
+      "RelativePath": "images/produtos/lanche-do-gordao-cosmopolis.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\produtos\\lanche-do-gordao-cosmopolis.png"
     },
     {
       "Identity": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\registrado.png",
