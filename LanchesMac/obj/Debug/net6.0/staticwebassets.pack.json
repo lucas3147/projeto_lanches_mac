@@ -97,6 +97,14 @@
       "PackagePath": "staticwebassets\\images\\senha-de-login.png"
     },
     {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\upload2.png",
+      "PackagePath": "staticwebassets\\images\\upload2.png"
+    },
+    {
+      "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\images\\visualizar1.png",
+      "PackagePath": "staticwebassets\\images\\visualizar1.png"
+    },
+    {
       "Id": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

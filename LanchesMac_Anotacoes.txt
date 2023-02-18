@@ -546,3 +546,167 @@ ROTEIRO PARA OS AJUSTES NO PROJETO
 		//Aqui eu uso  uma view component e tag helper para permitir o usuário navegar entre as páginas
 		<vc: pager paging-list="@Model"></vc:pager>
 	<div>
+
+				AULA 94
+
+IMPLEMENTANDO O GERENCIAMENTO DE IMAGENS: CONCEITOS E ABORDAGENS
+
+UPLOAD DE ARQUIVOS
+
+1 - Suporte com a vinculação do modelo em buffer npara arquivos menores
+
+2 - Suporte ao streaming sem buffer para arquivos maiores
+
+CONSIDERAÇÕES DE SEGURANÇA
+
+Riscos
+
+- Executar ataques de negação de serviço.
+
+- Fazer upload de vírus ou malware.
+
+- Comprometer a redes e servidores de outras maneiras.
+
+Cuidados
+
+- Fazer upload em uma área dedicada com restrição de segurança sem permissão de execução
+
+- Não persistir os arquivos carregados na mesma área de diretório da aplicação
+
+- Usar nome seguro de arquivo determinado pelo aplicativo (não pelo usuário)
+
+- Permitir apenas extensões de arquivos aprovadas
+
+- Verificar o tamanho do arquivo enviado e definir um tamanho máximo (30MB)
+
+- Determinar uma quantidade máxima de arquivos que podem ser enviada
+
+- Executar um antivírus no conteúdo enviado antes de armazenar o arquivo
+
+CONSIDERAÇÕES DE ARMAZENAGEM
+
+Banco de dados
+
+- Indicado para arquivos pequenos
+
+- Permite acessar toda a informação de forma única
+
+- Facilita o gerenciamento de arquivos e backup de segurança
+
+Sistema de arquivos
+
+- Gerenciamento é mais barato do que um serviço de banco de dados
+
+- Mas torna mais complexo o gerenciamento dos arquivos e o backup de segurança
+
+- Possuem limites mais amplos que os usados em um banco de dados
+
+GERENCIAMENTO DE IMAGENS
+
+Consultar, enviar e deletar imagens dos produtos
+
+1 - Definir uma pasta images/produtos para as imagens na pasta wwwroot do projeto
+
+2 - Criar um controlador AdminImagens e implementar as seguintres funcionalidades
+
+	a - Apresentar o formulário para exibir e enviar as imagens para a pasta de imagens
+
+		Action Index exibe os formulários para Enviar e Exibir Imagens
+
+	b - Selecionar imagens dos produtos e enviar para o servidor
+
+		Action UploadFiles envia os arquivos selecionados
+
+	c - Exibir e Excluir imagens dos produtos no servidor
+
+		Action GetImagens exibe as imagens com um link para deletar a imagem
+		
+		Action DeleteFile excluir uma imagem selecionada no servidor
+
+DEFINIR O NOME DA PASTA
+
+1 - Criar uma seçao ConfigurationPastaImagens no arquivo appsettings.json
+
+{
+	"ConfigurationPastaImagens" : {
+		"NomePastaImagensProdutos" : "images/produtos"
+	},
+}
+...
+
+Definir uma propriedade NomePastaImagensProdutos e atribuir o nome da pasta que vamos usar no projeto e criar no servidor
+
+2 - Criar um arquivo ConfigurationImagens com a propriedade NomePastaImagensProdutos
+
+public class ConfigurationImagens
+{
+	public string NomePastaImagensProdutos {get; set;}
+}
+
+Para poder ler o valor da propriedade no arquivo appsettings.json
+
+REGISTRAR SEÇÃO NO ARQUIVO STARTUP
+
+3 - Registrar a seção definida com nossa classe no Contâiner DI
+
+public void ConfigureServices(IServiceCollection services)
+{
+	...
+		services.Configure<ConfigurationImagens>(Configuration.GetSection("ConfigurationPastaImagens"));
+	...
+}
+
+ARQUIVO FILEMANAGERMODEL
+
+public class FileManagerModel
+{
+	public FileInfo[] { get; set; }
+	public IFormFile IFormFile { get; set; }
+	public List<IFormFile> IFormFiles { get; set; }
+	public string PathImagesProduto { get; set; }
+}
+
+Define propriedades que iremos usar para gerenciar os arquivos usando os recursos: 
+
+	FileInfo - Fornece propriedades e métodos para criar, copiar, excluir, abrir arquivos, etc;
+	
+	IFormFile - Representa um arquivo enviado via httprequest
+
+	List<IFormFile> - Representa uma lista de arquivos enviados via httprequest
+
+	PathImagesProduto - Representa a pasta onde vamos salvar as imagens
+
+CONTROLLER ADMINIMAGENS
+
+Injetar o serviço IOption<T> e IwebHostEnvironment no construtor
+
+[Area("Admin")]
+[Authorize(Roles = "Admin")]
+public class AdminImagensController : Controller
+{
+	private readonly ConfigurationImagens _myConfig;
+
+	private readonly IWebHostEnvironment _ hostingEnvironment;
+
+	public AdminImagensController(IWebHostEnvironment hostingEnvironment, IOptions<ConfigurationImagens> myConfiguration)
+	{
+		_hostingEnvironment = hostingEnvironment;
+		_myConfig = myCofiguration.Value;
+	}
+	...
+}
+
+// Para conseguir ler as informações do appSettings.json, estamos utilizando o padrão IOptions que usa uma classe para fornecer um acesso fortemente tipados a grupos de configuração que estão relacionados (no nosso caso essa classe é ConfigurationImagens), sendo assim, _myConfig já pode acessar o valor da propriedade "NomePastaImagensProdutos"
+
+// IWebHostEnvironment fornece informações sobre o ambiente de hospedagem a onde a nossa aplicação está sendo executada
+
+
+				AULA 96
+
+EXIBINDO AS INFORMAÇÕES PARA UPLOAD
+
+IMPORTANTE
+
+No método Configure() em Startup.cs
+
+Existe um middleware chamado app.UseStaticFiles(), que ao ser chamado antes do middleware app.UseAuthorization(), não estamos fazendo a verificação de autorização dos arquivos estáticos, dessa forma , os arquivos estáticos tem acesso público

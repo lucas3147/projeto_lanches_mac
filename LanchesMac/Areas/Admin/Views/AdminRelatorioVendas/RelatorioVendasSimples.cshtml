@@ -1,0 +1,92 @@
+﻿@model IEnumerable<LanchesMac.Models.Pedido>
+
+    <h2>Pedidos Por Período</h2>
+
+    <div class="col-md-6">
+        <form class="form-horizontal">
+            <fieldset>
+                <legend><b>Relatório de Pedidos por Período</b></legend>
+                <div class="form-group">
+                    <label for="minDate" class="col-lg-6 control-label">Data Inicial</label>
+                    <div class="col-lg-10">
+                        <input type="date" name="minDate" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="maxDate" class="col-lg-6 control-label">Data Final</label>
+                    <div class="col-lg-10">
+                        <input type="date" name="maxDate" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group  mt-3 mb-3">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Total de pedidos = @Model.Count()</h3>
+            <h3 class="panel-title">Total de lanches nos pedidos = @Model.Sum(obj => obj.TotalItensPedido).ToString()</h3>
+            <h3 class="panel-title">Valor total dos pedidos = @Model.Sum(obj => obj.PedidoTotal).ToString("c")</h3>
+        </div>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr class="success">
+                    <th>
+                        @Html.DisplayNameFor(model => model.PedidoId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telefone)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PedidoTotal)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TotalItensPedido)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PedidoEntregueEm)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr class="success">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PedidoId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PedidoTotal)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalItensPedido)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PedidoEntregueEm)
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
