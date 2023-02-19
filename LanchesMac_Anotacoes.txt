@@ -710,3 +710,29 @@ IMPORTANTE
 No método Configure() em Startup.cs
 
 Existe um middleware chamado app.UseStaticFiles(), que ao ser chamado antes do middleware app.UseAuthorization(), não estamos fazendo a verificação de autorização dos arquivos estáticos, dessa forma , os arquivos estáticos tem acesso público
+
+
+				AULA 99
+
+GERANDO GRÁFICOS COM GOOGLECHART
+
+
+Gráfico das vendas totais por produto e da quantidade total por produto em um período de tempo
+
+1 - Vendas totais por produto e quantidade total nos últimos 360 dias (gráfico de coluna)
+
+2 - Vendas totais por produto e quantidade total nos últimos 30 dias (gráfico de barra)
+
+3 - Vendas totais por produto e quantidade total nos últimos 7 dias (gráfico de linha)
+
+PASSO A PASSO
+
+1 - Criar a classe LancheGráfico na pasta Models e definir as propriedades LancheNome, LanchesQuantidade e LanchesValorTotal
+
+2 - Criar o serviço - GráficoVendasService - para calcular o valor do total das vendas por produto e a quantidade total vendida por produto
+
+3 - Criar o controlador - AdminGraficosController - e definir os métodos Action usando o serviço criado
+
+4 - Criar as Views e usar o GoogleChart para gerar os gráficos com base nos dados obtidos do serviço
+
+5 - Incluir no menu do dministração, no arquivo _Layout, as opções dos gráficcos aa serem apresentados
