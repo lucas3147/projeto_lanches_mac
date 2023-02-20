@@ -1,9 +1,11 @@
 ﻿using LanchesMac.Areas.Admin.Servicos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LanchesMac.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize("Admin")]
     public class AdminRelatorioVendasController : Controller
     {
         private readonly RelatorioVendasService relatorioVendasService;
