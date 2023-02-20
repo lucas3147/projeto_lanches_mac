@@ -6,19 +6,10 @@
 
 <h1>Pedidos</h1>
 
-<p>
-    <a asp-action="Create">Criar novo pedido</a>
-</p>
-
 <form method="get" class="formn-inline">
-    <input name="filter" class="form-control" placeholder="Nome do lanche" value="@Model.RouteValue["filter"]" />
-    <button class="btn btn-primary">Procurar</button>
+    <input name="filter" class="form-control" placeholder="Nome do cliente" value="@Model.RouteValue["filter"]" />
+    <button class="btn btn-primary my-3">Procurar</button>
 </form>
-
-Total de Lanches: @Model.TotalRecordCount
-<div>
-    <vc:pager paging-list="@Model"></vc:pager>
-</div>
 
 <table class="table">
     <thead>
@@ -105,3 +96,10 @@ Total de Lanches: @Model.TotalRecordCount
 }
     </tbody>
 </table>
+
+Total de Lanches: @Model.TotalRecordCount
+
+<div style="margin-left: 45%">
+    <vc:pager paging-list="@Model"></vc:pager>
+</div>
+

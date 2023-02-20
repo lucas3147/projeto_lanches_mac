@@ -62,12 +62,6 @@ namespace LanchesMac.Areas.Admin.Controllers
             return View(pedido);
         }
 
-        // GET: Admin/AdminPedido/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
         // POST: Admin/AdminPedido/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.

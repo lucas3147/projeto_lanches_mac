@@ -7,18 +7,13 @@
 <h1>Lanches</h1>
 
 <p>
-    <a asp-action="Create">Criar</a>
+    <a asp-action="Create">Criar novo lanche</a>
 </p>
 
 <form method="get" class="formn-inline">
     <input name="filter" class="form-control" placeholder="Nome do lanche" value="@Model.RouteValue["filter"]"/>
-    <button class="btn btn-primary">Procurar</button>
+    <button class="btn btn-primary my-3">Procurar</button>
 </form>
-
-Total de Lanches: @Model.TotalRecordCount
-<div>
-    <vc:pager paging-list="@Model"></vc:pager>
-</div>
 
 <div class="row">
     <div class="col-md-10">
@@ -78,3 +73,10 @@ Total de Lanches: @Model.TotalRecordCount
         </table>
     </div>
 </div>
+
+Total de Lanches: @Model.TotalRecordCount
+
+<div style="margin-left: 45%">
+    <vc:pager paging-list="@Model"></vc:pager>
+</div>
+
