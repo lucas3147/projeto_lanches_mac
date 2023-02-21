@@ -5,10 +5,12 @@
 }
 
 <h1>Lanches</h1>
-
-<p>
-    <a asp-action="Create">Criar novo lanche</a>
-</p>
+<div class="row">
+    <p>
+        <a asp-action="Create">Criar Lanche</a> |  
+        <a asp-controller="AdminLanchesReport" asp-action="LanchesCategoriaReport">Gerar Relatório</a>
+    </p>
+</div>
 
 <form method="get" class="formn-inline">
     <input name="filter" class="form-control" placeholder="Nome do lanche" value="@Model.RouteValue["filter"]"/>

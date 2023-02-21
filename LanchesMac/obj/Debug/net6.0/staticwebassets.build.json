@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ofR+bOX+G5CZBZULPwYOtK8KjpM/w+Lu58E9D7fnDpw=",
+  "Hash": "1pupdpgHUBFsa4fwNZh+DntKBM4SPErhcR9Y6z19lTM=",
   "Source": "LanchesMac",
   "BasePath": "_content/LanchesMac",
   "Mode": "Default",
@@ -1460,6 +1460,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\reports\\LanchesCategoria.frx",
+      "SourceId": "LanchesMac",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\wwwroot\\",
+      "BasePath": "_content/LanchesMac",
+      "RelativePath": "reports/LanchesCategoria.frx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\reports\\LanchesCategoria.frx"
     }
   ]
 }

@@ -40,6 +40,22 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "FastReport.OpenSource": {
+              "target": "Package",
+              "version": "[2023.1.13, )"
+            },
+            "FastReport.OpenSource.Data.MsSql": {
+              "target": "Package",
+              "version": "[2021.4.0, )"
+            },
+            "FastReport.OpenSource.Export.PdfSimple": {
+              "target": "Package",
+              "version": "[2023.1.13, )"
+            },
+            "FastReport.OpenSource.Web": {
+              "target": "Package",
+              "version": "[2023.1.13, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.2, )"

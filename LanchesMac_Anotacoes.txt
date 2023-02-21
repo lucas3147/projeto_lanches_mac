@@ -736,3 +736,139 @@ PASSO A PASSO
 4 - Criar as Views e usar o GoogleChart para gerar os gráficos com base nos dados obtidos do serviço
 
 5 - Incluir no menu do dministração, no arquivo _Layout, as opções dos gráficcos aa serem apresentados
+
+
+				AULA 109
+
+FAZENDO O DEPLOY NO IIS - Web Deploy (Host Azul)
+
+Host Azul é um host que suporta a hospedagem do Asp.Net Core 6, Entity Framework Core e o banco de dados Sql Server, e ao final nós poderemos acessar o nosso site de lanches na web
+
+IIS - Internet Information Server
+
+- É o servidor de aplicativos da Microsoft
+
+- Um servidor de aplicativos serve conteúdo estático ou dinâmico por meio de requisições HTTP
+
+- O IIS é um servidor de aplicativos flecível e de uso geral executado no Windows
+
+- Podemos implantar nosso projeto IIS basicamente implantando o projeto em uma pasta e criando um site no IIS apontando para esta pasta
+
+MODOS DE DEPLOY : FRAMEWORK-DEPENDENT E SELF-CONTAINED
+
+1 - Framework-dependent
+
+	Produz um aplicativo que inclui apenas seu próprio aplicativo e suas dependências
+
+	Produz um binário de plataforma cruzada como um arquivo dll e um executável específico da plataforma direcionada à sua plataforma atual
+
+Vantagens:
+
+	Implantação pequena: Apenas o aplicativo e suas dependências são distribuidos; Tamanho Reduzido;
+
+	Multiplataforma: o aplicativo e qualquer biblioteca baseada em .NET são executados em outros sistemas operacionais
+
+	Usa as correções de runtime mais recente : o aplicativo usa o runtime mais recente instalado no sistema de destino.
+
+Desvantagens:
+
+	Requer o runtime de execução pré-instalado, alteração de versão
+
+2 - Self-Contained
+
+	Produz a versão do .NET Core: você controla qual versão do .NET Core é implantada com seu aplicativo.
+
+Vantagens
+
+	Segmentação específica de plataforma: como você precisa publicar seu aplicativo para casda plataforma, você sabe onde seu aplicativo será executado.
+
+	Garanta: o usuário estará mais confiante de que o aplicativo será executado em um sistema de destino, pois você está fornecendo o .NET Core RunTime no qual ele será executado na compilação final
+
+Desvantagens:
+
+	tamanho maior, difícil atualizar a versão do .NET Core
+
+MODELOS DE HOSPEDAGEM
+
+In Process
+
+	O módulo ASP .NET Core encaminha as requisi;'oes ao IIS HTTP Server (IISHttpServer). É mais rápido e performático.
+
+Out Process
+
+	O módulo ASP .NET Core encaminha as requisições ao servidor Kestrel. É mais lento
+
+	<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+
+				AULA 110
+
+GERANDO RELATÓRIOS USANDO O FASTREPORT OPENSOURCE
+
+FastReport Community Edition
+
+	Fornece um gerador de relatórios de código aberto para a plataforma .NET onde nós podemos gerar relatórios para aplicações Asp .Net Core MVC e aplicações Web Api
+
+	Site
+
+		https://opensource.fast-report.com/
+
+	Documentação
+
+		https://fastreports.github.io/FastReport.Documentation/
+
+	Download
+
+		https://github.com/FastReports/FastReport/releases
+
+ROTEIRO PARA GERAR RELATÓRIOS DE LANCHES POR CATEGORIA
+
+	Incluir os pacotes Nugets no projeto Lanches
+
+	Configurar o projeto para usar o FastReport na classe Program
+
+	Usar o assistente de relatório padrão Designer e criar o leiaute do relatório
+
+	Salvar o relatório com o nome LancheCategoria.frx em wwwroot/reports
+
+	Criar o serviço RelatorioLanchesService para obter os dados de Lanches e Categorias
+
+	Criar o método estático GetTable() para converter os dados de IEnumerable<T> para DataTable
+
+	Criar o controlador AdminLanchesReportController e o método Action LanchesCategoriaReport para gerar o relatório
+
+	Criar a view LanchesCategoriaReport para renderizar o relatório
+
+	Definir na view Index.cshtml de lanches um linh para gerar o relatório
+
+FASTREPORT - INTEGRAR O RELATÓRIO COM APP LANCHESMAC (NET 6)
+
+Incluir os pacotes nuget no projeto:
+
+	FastReport.OpenSource
+	FastReport.OpenSource.Export.PdfSimple
+	FastReport.OpenSource.Web
+	FastReport.OpenSource.Data.MsSql
+
+Criar a pasta do projeto vamos gerar o relatório : wwwroot/reports
+
+Nome do relatório : LanchesCategoria.frx
+
+
+				AULA 112
+
+CRIANDO OS SERVIÇOS PARA OBTER OS DADOS
+
+APÓS Criarmos o Serviço RelatorioLanchesService para obter os dados do contexto, vamos...
+
+CONVERTER IENUMERABLE<T> PARA DATATABLE
+
+- Criar pasta FastReportUtils na área Admin do projeto
+
+- Criar a classe HelperFastReport
+
+- Criar o método GetTable<T> que receb um IEnumerable<T> e converte para um DataTable
+
+public static DataTable GetTable<TEntity>(IEnumerable<TEntity> table, string name) where TEntity : class 
+{
+	//...
+}	
