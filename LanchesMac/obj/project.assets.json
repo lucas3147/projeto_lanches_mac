@@ -12002,7 +12002,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gustavo\\.nuget\\packages\\": {}
+    "C:\\Users\\lgust\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -12010,11 +12010,11 @@
       "projectUniqueName": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\LanchesMac.csproj",
       "projectName": "LanchesMac",
       "projectPath": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\LanchesMac.csproj",
-      "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\lgust\\.nuget\\packages\\",
       "outputPath": "C:\\Lucas\\Projetos\\LanchesMac\\LanchesMac\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Gustavo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lgust\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12104,7 +12104,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

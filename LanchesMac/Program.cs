@@ -130,7 +130,7 @@ void CriarPerfisUsuarios(WebApplication app)
     using (var scope = scopedFactory.CreateScope())
     {
         var service = scope.ServiceProvider.GetService<IseedUserRoleInitial>();
-        service.SeedUsers();
         service.SeedRoles();
+        service.SeedUsers();
     }
 } 
